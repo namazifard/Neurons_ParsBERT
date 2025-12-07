@@ -1,23 +1,29 @@
 # Neurons_ParsBERT
 
-1. Define Languages
+1. Dependencies and Languages
+   ```bash
+   pip install torch transformers pandas matplotlib
+   ```
    ```bash
    LANGS21=("ar" "zh" "cs" "en" "fi" "fr" "de" "hi" "id" "it" \
          "ja" "ko" "pl" "pt" "ru" "es" "sv" "th" "tr" "is" "gl")
+   ```
+   ```bash
+   LANGS_CONTACT=("ar" "en" "fr" "de" "hi" "ja" "ru" "tr")
    ```
 
 2. Prepare Data
    ```bash
    python prepare_data.py \
       --tag ParsBERT \
-      --langs "${LANGS21[@]}"
+      --langs "${LANGS_CONTACT[@]}"
    ```
 
 3. Calculate Activation
    ```bash
-   for L in "${LANGS21[@]}"; do
+   for L in "${LANGS_CONTACT[@]}"; do
       echo "=== ParsBERT activation: $L ==="
-      python activation_hf.py \
+      python activation.py \
             -m HooshvareLab/bert-base-parsbert-uncased \
             -l "$L" \
             --tag ParsBERT \
@@ -29,9 +35,9 @@
 
 4. Identify Neurons
    ```bash
-   python identify_hf.py \
+   python identify.py \
       --tag ParsBERT \
-      --langs "${LANGS21[@]}"
+      --langs "${LANGS_CONTACT[@]}"
    ```
 
 5. Ablation, Analysis, and Plots
@@ -41,7 +47,7 @@
       --model HooshvareLab/bert-base-parsbert-uncased \
       --tag ParsBERT \
       --mask activation_mask/ParsBERT.neuron.pth \
-      --langs "${LANGS21[@]}" \
+      --langs "${LANGS_CONTACT[@]}" \
       --split valid \
       --max-length 512 \
       --mask-batch-size 32 \
@@ -55,7 +61,7 @@
       --model ViraIntelligentDataMining/PersianLLaMA-13B \
       --tag PersianLLaMA-13B-Instruct \
       --mask activation_mask/PersianLLaMA-13B-Instruct.neuron.pth \
-      --langs "${LANGS21[@]}" \
+      --langs "${LANGS_CONTACT[@]}" \
       --split valid \
       --max-model-len 3152 \
       --gpu-memory-utilization 0.9 \
