@@ -67,3 +67,12 @@
       --gpu-memory-utilization 0.9 \
       --outdir results/PersianLLaMA-13B
    ```
+
+6. Plots
+   ```bash
+   python plots_parsbert.py \
+      --tag ParsBERT \
+      --langs "${LANGS_CONTACT[@]}" \
+      --outdir results/ParsBERT
+   ```
+   
