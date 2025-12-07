@@ -1,0 +1,215 @@
+{
+  "model": "bigscience/bloom-560m",
+  "rows": [
+    {
+      "split": "train",
+      "lang": "ar",
+      "subword_tokens": 20798
+    },
+    {
+      "split": "train",
+      "lang": "zh",
+      "subword_tokens": 17363
+    },
+    {
+      "split": "train",
+      "lang": "cs",
+      "subword_tokens": 36097
+    },
+    {
+      "split": "train",
+      "lang": "en",
+      "subword_tokens": 18756
+    },
+    {
+      "split": "train",
+      "lang": "fi",
+      "subword_tokens": 33983
+    },
+    {
+      "split": "train",
+      "lang": "fr",
+      "subword_tokens": 21399
+    },
+    {
+      "split": "train",
+      "lang": "de",
+      "subword_tokens": 30146
+    },
+    {
+      "split": "train",
+      "lang": "hi",
+      "subword_tokens": 23491
+    },
+    {
+      "split": "train",
+      "lang": "id",
+      "subword_tokens": 17762
+    },
+    {
+      "split": "train",
+      "lang": "it",
+      "subword_tokens": 28408
+    },
+    {
+      "split": "train",
+      "lang": "ja",
+      "subword_tokens": 33639
+    },
+    {
+      "split": "train",
+      "lang": "ko",
+      "subword_tokens": 51953
+    },
+    {
+      "split": "train",
+      "lang": "pl",
+      "subword_tokens": 37167
+    },
+    {
+      "split": "train",
+      "lang": "pt",
+      "subword_tokens": 20384
+    },
+    {
+      "split": "train",
+      "lang": "ru",
+      "subword_tokens": 44537
+    },
+    {
+      "split": "train",
+      "lang": "es",
+      "subword_tokens": 20771
+    },
+    {
+      "split": "train",
+      "lang": "sv",
+      "subword_tokens": 30262
+    },
+    {
+      "split": "train",
+      "lang": "th",
+      "subword_tokens": 79868
+    },
+    {
+      "split": "train",
+      "lang": "tr",
+      "subword_tokens": 35240
+    },
+    {
+      "split": "train",
+      "lang": "is",
+      "subword_tokens": 36066
+    },
+    {
+      "split": "train",
+      "lang": "gl",
+      "subword_tokens": 22672
+    },
+    {
+      "split": "eval",
+      "lang": "ar",
+      "subword_tokens": 4957
+    },
+    {
+      "split": "eval",
+      "lang": "zh",
+      "subword_tokens": 4245
+    },
+    {
+      "split": "eval",
+      "lang": "cs",
+      "subword_tokens": 8636
+    },
+    {
+      "split": "eval",
+      "lang": "en",
+      "subword_tokens": 4517
+    },
+    {
+      "split": "eval",
+      "lang": "fi",
+      "subword_tokens": 8267
+    },
+    {
+      "split": "eval",
+      "lang": "fr",
+      "subword_tokens": 5165
+    },
+    {
+      "split": "eval",
+      "lang": "de",
+      "subword_tokens": 7121
+    },
+    {
+      "split": "eval",
+      "lang": "hi",
+      "subword_tokens": 5681
+    },
+    {
+      "split": "eval",
+      "lang": "id",
+      "subword_tokens": 4367
+    },
+    {
+      "split": "eval",
+      "lang": "it",
+      "subword_tokens": 6795
+    },
+    {
+      "split": "eval",
+      "lang": "ja",
+      "subword_tokens": 8115
+    },
+    {
+      "split": "eval",
+      "lang": "ko",
+      "subword_tokens": 12292
+    },
+    {
+      "split": "eval",
+      "lang": "pl",
+      "subword_tokens": 8909
+    },
+    {
+      "split": "eval",
+      "lang": "pt",
+      "subword_tokens": 4931
+    },
+    {
+      "split": "eval",
+      "lang": "ru",
+      "subword_tokens": 10826
+    },
+    {
+      "split": "eval",
+      "lang": "es",
+      "subword_tokens": 4942
+    },
+    {
+      "split": "eval",
+      "lang": "sv",
+      "subword_tokens": 7339
+    },
+    {
+      "split": "eval",
+      "lang": "th",
+      "subword_tokens": 19126
+    },
+    {
+      "split": "eval",
+      "lang": "tr",
+      "subword_tokens": 8381
+    },
+    {
+      "split": "eval",
+      "lang": "is",
+      "subword_tokens": 8875
+    },
+    {
+      "split": "eval",
+      "lang": "gl",
+      "subword_tokens": 5406
+    }
+  ]
+}
