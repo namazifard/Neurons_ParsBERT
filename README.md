@@ -5,11 +5,26 @@
    pip install torch transformers pandas matplotlib
    ```
    ```bash
-   LANGS21=("ar" "zh" "cs" "en" "fi" "fr" "de" "hi" "id" "it" \
+   LANGS=("ar" "zh" "cs" "en" "fi" "fr" "de" "hi" "id" "it" \
          "ja" "ko" "pl" "pt" "ru" "es" "sv" "th" "tr" "is" "gl")
    ```
    ```bash
    LANGS_CONTACT=("ar" "en" "fr" "de" "hi" "ja" "ru" "tr")
+   ```
+   ```bash
+   UPOS_CATS=("UPOS-NOUN" "UPOS-VERB" "UPOS-ADJ" "UPOS-ADV" "UPOS-PRON" "UPOS-ADP")
+   ```
+   ```bash
+   CASE_CATS=(
+  "Case-Nom" "Case-Gen" "Case-Acc" "Case-Loc"
+  "Case-Dat" "Case-Ins" "Case-Par" "Case-Ine"
+  "Case-Ill" "Case-Abl" "Case-Ade" "Case-Ela"
+   )
+   ```
+   ```bash
+   GENDER_CATS=(
+  "Gender-Fem" "Gender-Masc" "Gender-Neut" "Gender-Com"
+   )
    ```
 
 2. Prepare Data

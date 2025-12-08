@@ -1,0 +1,7 @@
+,layer1,layer2,layer3,layer4,layer5,layer6,layer7,layer8,layer9,layer10,layer11,layer12
+UPOS-NOUN,45,43,6,4,7,8,3,9,6,9,12,19
+UPOS-VERB,36,39,5,4,7,7,4,11,6,9,10,20
+UPOS-ADJ,65,52,12,5,8,8,4,14,8,14,18,31
+UPOS-ADV,63,60,7,5,9,10,4,12,8,7,8,16
+UPOS-PRON,15,10,3,1,5,5,1,4,3,6,10,15
+UPOS-ADP,7,18,3,3,4,0,4,3,3,14,11,9
