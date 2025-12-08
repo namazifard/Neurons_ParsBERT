@@ -5,26 +5,25 @@
    pip install torch transformers pandas matplotlib
    ```
    ```bash
-   LANGS=("ar" "zh" "cs" "en" "fi" "fr" "de" "hi" "id" "it" \
-         "ja" "ko" "pl" "pt" "ru" "es" "sv" "th" "tr" "is" "gl")
+   LANGS8=("ar" "en" "fr" "de" "hi" "ja" "ru" "tr")
    ```
    ```bash
-   LANGS_CONTACT=("ar" "en" "fr" "de" "hi" "ja" "ru" "tr")
+   LANGS=("ar" "zh" "cs" "en" "fi" "fr" "de" "hi" "id" "it" "ja" "ko" "pl" "pt" "ru" "es" "sv" "th" "tr" "is" "gl")
    ```
    ```bash
    UPOS_CATS=("UPOS-NOUN" "UPOS-VERB" "UPOS-ADJ" "UPOS-ADV" "UPOS-PRON" "UPOS-ADP")
    ```
    ```bash
-   CASE_CATS=(
-  "Case-Nom" "Case-Gen" "Case-Acc" "Case-Loc"
-  "Case-Dat" "Case-Ins" "Case-Par" "Case-Ine"
-  "Case-Ill" "Case-Abl" "Case-Ade" "Case-Ela"
-   )
+   CASE_CATS=("Case-Nom" "Case-Gen" "Case-Acc" "Case-Loc" "Case-Dat" "Case-Ins")
    ```
    ```bash
-   GENDER_CATS=(
-  "Gender-Fem" "Gender-Masc" "Gender-Neut" "Gender-Com"
-   )
+   CASE_CATS_EXT=("Case-Nom" "Case-Gen" "Case-Acc" "Case-Loc" "Case-Dat" "Case-Ins" "Case-Par")
+   ```
+   ```bash
+   CASE_CATS_TOTALL=("Case-Nom" "Case-Gen" "Case-Acc" "Case-Loc" "Case-Dat" "Case-Ins" "Case-Par" "Case-Ine" "Case-Ill" "Case-Abl" "Case-Ade" "Case-Ela")
+   ```
+   ```bash
+   GENDER_CATS=("Gender-Fem" "Gender-Masc" "Gender-Neut" "Gender-Com")
    ```
 
 2. Prepare Data
@@ -90,4 +89,27 @@
       --langs "${LANGS_CONTACT[@]}" \
       --outdir results/ParsBERT
    ```
+
+
+7. UPOS
+   ```bash
+   UPOS_CATS=("UPOS-NOUN" "UPOS-VERB" "UPOS-ADJ" "UPOS-ADV" "UPOS-PRON" "UPOS-ADP")
+
+   for L in "${UPOS_CATS[@]}"; do
+   echo "=== ParsBERT activation: $L ==="
+   python activation.py \
+         -m HooshvareLab/bert-base-parsbert-uncased \
+         -l "$L" \
+         --tag ParsBERT \
+         --task mlm
+   done
    
+   python identify.py \
+     --tag ParsBERT \
+     --langs "${UPOS_CATS[@]}"
+
+   python plots_categories.py \
+     --mask activation_mask/ParsBERT.neuron.pth \
+     --cats "${UPOS_CATS[@]}" \
+     --outdir results/ParsBERT_UPOS
+   ```
